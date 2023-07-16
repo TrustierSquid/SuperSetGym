@@ -4,16 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuperSet | Home</title>
-    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/src/scss/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/icofont/icofont.min.css">
 </head>
 <body>
-    <nav>
-        <h3>SuperSet</h3>
+    <!-- navBar -->
+    <nav id="navbar">
+        <h1>SSG</h1>
         <ul>
-            <li><a href="#">View Clubs</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#"></a></li>
+            <li class="nav-link"><a href="#">View Clubs</a></li>
+            <li class="nav-link"><a href="#">About us</a></li>
+            <li class="nav-link"><button><a href="#">Join</a></button></li>
         </ul>
+        <button id="mobile-nav-btn">
+            <i class="icofont-navigation-menu"></i>
+        </button>
     </nav>
+
+    <header id="hero-section">
+        <h1>SuperSet <span>Fitness</span></h1>
+        <h1>Begin your <span>Fitness Journey</span></h1>
+        <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quaerat.</h4>
+        <div id="hero-btn">
+            <button>Free pass</button>
+            <button id="location-btn">Free pass</button>
+        </div>
+    </header>
 </body>
 </html>
