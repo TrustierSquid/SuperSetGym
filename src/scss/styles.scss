@@ -1,10 +1,12 @@
 $primary: #2d8cf9;
 $secondary: #050330;
 $accent: #4a45f4;
+$gradientFontColor: #c3c3c3;
 
 html {
     scroll-behavior: smooth;
     font-family: "Arial";
+    height: 200vh;
 }
 
 * {
@@ -16,6 +18,12 @@ html {
 body {
     background-color: black;
     color: white;
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
 }
 
 @mixin gradientTextHero {
@@ -36,7 +44,6 @@ body {
     border-radius: 0.5rem;
     font-size: 1.2rem;
     cursor: pointer;
-    
 }
 
 #navbar {
@@ -44,7 +51,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    margin-bottom: 10rem;
+    // margin-bottom: 10rem;
 
     h1 {
         font-size: 2rem;
@@ -89,29 +96,100 @@ body {
 }
 
 
+
 #hero-section {
+
+    height: 600px;
     margin-inline: 10%;
+    margin-bottom: 5%;
     display: flex;
     flex-direction: column;
+    align-content: center;
+    justify-content: center;
     gap: 0.5rem;
+    font-size: clamp(0.5rem, 1.5rem, 2.5rem);
+    
     h1 {
-        font-size: 3.5rem;
         span {
             @include gradientTextHero()
         }
+
+        font-size: 3rem;
     }
 
     #hero-btn {
+
+        display: flex;
+        
         button {
             @include heroButton()
         }
 
         #location-btn {
             background: transparent;
-            border: 3px solid $accent;
+            border: 2px solid $accent;
         }
     }
 
+    #hero-img {
+        position: absolute;
+        right: 20%;
+        height: 100vh;
+        z-index: -1;
+        opacity: 0.3;
+    }
+
+}
+
+#three-points {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    padding: 1rem;
+    gap: 3rem;
+
+
+    section {
+        background: rgb(45,140,249);
+        background: linear-gradient(308deg, rgba(45,140,249,1) 6%, rgba(74,69,244,1) 30%); 
+        width: 400px;
+        border-radius: 1rem;
+        padding: 1rem;
+        font-size: 1.3rem;
+        
+        padding: 2.6rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+
+        h1 {
+            color: white;
+        }
+
+        color: $gradientFontColor;
+
+        .icofont-heart-alt,
+        .icofont-dumbbell,
+        .icofont-fruits {
+            font-size: 4rem;
+        }
+    }
+
+
+    section:nth-of-type(2){
+        background: rgb(45,140,249);
+        background: linear-gradient(108deg, rgba(45,140,249,1) 6%, rgba(74,69,244,1) 30%);
+    }
+
+    section:nth-of-type(3){
+        background: rgb(45,140,249);
+        background: linear-gradient(08deg, rgba(45,140,249,1) 6%, rgba(74,69,244,1) 30%);
+    }
+    
 }
 
 
@@ -121,17 +199,19 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 950px) {
+    #three-points {
+        height: 150vh;
+        flex-direction: column;
+        justify-content: start;
+        
+        section {
+            width: 100%;
+            
+        }
+        
+    }
+}
 
 
 @media (max-width: 768px) {
@@ -144,4 +224,30 @@ body {
             display: block;
         }
     }
+
+    #hero-section {
+        text-align: center;
+        
+        // subheader text
+
+        h1 {
+            font-size: 3rem;
+        }
+        
+        h4 {
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        #hero-btn {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        #hero-img {
+            display: none;
+        }
+    }
+
+    
 }
