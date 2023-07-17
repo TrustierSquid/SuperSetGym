@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   font-family: "Arial";
+  height: 200vh;
 }
 
 * {
@@ -12,6 +13,13 @@ html {
 body {
   background-color: black;
   color: white;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 #navbar {
@@ -19,7 +27,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  margin-bottom: 10rem;
 }
 #navbar h1 {
   font-size: 2rem;
@@ -56,19 +63,27 @@ body {
 }
 
 #hero-section {
+  height: 600px;
   margin-inline: 10%;
+  margin-bottom: 5%;
   display: flex;
   flex-direction: column;
+  align-content: center;
+  justify-content: center;
   gap: 0.5rem;
+  font-size: 1.5rem;
 }
 #hero-section h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 #hero-section h1 span {
   background: #2D8CF9;
   background: linear-gradient(to right, #2D8CF9 19%, #4A45F4 71%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+#hero-section #hero-btn {
+  display: flex;
 }
 #hero-section #hero-btn button {
   width: 150px;
@@ -84,14 +99,89 @@ body {
 }
 #hero-section #hero-btn #location-btn {
   background: transparent;
-  border: 3px solid #4a45f4;
+  border: 2px solid #4a45f4;
+}
+#hero-section #hero-img {
+  position: absolute;
+  right: 20%;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.3;
 }
 
+#three-points {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  padding: 1rem;
+  gap: 3rem;
+}
+#three-points section {
+  background: rgb(45, 140, 249);
+  background: linear-gradient(308deg, rgb(45, 140, 249) 6%, rgb(74, 69, 244) 30%);
+  width: 400px;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 1.3rem;
+  padding: 2.6rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  color: #c3c3c3;
+}
+#three-points section h1 {
+  color: white;
+}
+#three-points section .icofont-heart-alt,
+#three-points section .icofont-dumbbell,
+#three-points section .icofont-fruits {
+  font-size: 4rem;
+}
+#three-points section:nth-of-type(2) {
+  background: rgb(45, 140, 249);
+  background: linear-gradient(108deg, rgb(45, 140, 249) 6%, rgb(74, 69, 244) 30%);
+}
+#three-points section:nth-of-type(3) {
+  background: rgb(45, 140, 249);
+  background: linear-gradient(8deg, rgb(45, 140, 249) 6%, rgb(74, 69, 244) 30%);
+}
+
+@media (max-width: 950px) {
+  #three-points {
+    height: 150vh;
+    flex-direction: column;
+    justify-content: start;
+  }
+  #three-points section {
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   #navbar ul {
     display: none;
   }
   #navbar #mobile-nav-btn {
     display: block;
+  }
+  #hero-section {
+    text-align: center;
+  }
+  #hero-section h1 {
+    font-size: 3rem;
+  }
+  #hero-section h4 {
+    padding: 0.5rem;
+    text-align: center;
+  }
+  #hero-section #hero-btn {
+    flex-direction: row;
+    justify-content: center;
+  }
+  #hero-section #hero-img {
+    display: none;
   }
 }/*# sourceMappingURL=styles.css.map */
