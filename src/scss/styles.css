@@ -26,12 +26,20 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1.5rem;
 }
-#navbar h1 {
+#navbar #nav-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#navbar #nav-logo h1 {
   font-size: 2rem;
   font-style: italic;
   font-weight: bolder;
+}
+#navbar #nav-logo h4 {
+  color: #2D8CF9;
 }
 #navbar ul li {
   display: inline;
@@ -113,9 +121,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 200px;
   padding: 1rem;
   gap: 3rem;
+  margin-bottom: 3rem;
 }
 #three-points section {
   background: rgb(45, 140, 249);
@@ -148,6 +156,59 @@ img {
 #three-points section:nth-of-type(3) {
   background: rgb(45, 140, 249);
   background: linear-gradient(8deg, rgb(45, 140, 249) 6%, rgb(74, 69, 244) 30%);
+}
+
+#main-content {
+  background: rgb(74, 69, 244);
+  background: linear-gradient(121deg, rgb(74, 69, 244) 21%, rgb(5, 3, 48) 21%);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 5rem;
+  padding: 3rem;
+}
+#main-content article {
+  margin-inline: 10%;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+#main-content article .gym-information {
+  display: flex;
+  padding: 2rem;
+  gap: 2.5rem;
+}
+#main-content article .gym-information img {
+  height: 300px;
+  border-radius: 1rem;
+}
+#main-content article .gym-information .key-description {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#main-content article .gym-information .key-description h1 {
+  font-size: 3rem;
+  background: #B2B4F4;
+  background: linear-gradient(to right, #B2B4F4 22%, #2D8CF9 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+#main-content article .gym-information .key-description p {
+  padding: 1rem;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  font-weight: ligther;
+  color: white;
+}
+#main-content .section-header {
+  font-size: 3rem;
+  background: #B2B4F4;
+  background: linear-gradient(to right, #B2B4F4 22%, #2D8CF9 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 
 @media (max-width: 950px) {

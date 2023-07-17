@@ -46,18 +46,41 @@ img {
     cursor: pointer;
 }
 
+@mixin sectionHeader {
+    font-size: 3rem;
+    background: #B2B4F4;
+    background: linear-gradient(to right, #B2B4F4 22%, #2D8CF9 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+
+}
+
 #navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 1.5rem;
     // margin-bottom: 10rem;
 
-    h1 {
-        font-size: 2rem;
-        font-style: italic;
-        font-weight: bolder;
+    #nav-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        h1 {
+            font-size: 2rem;
+            font-style: italic;
+            font-weight: bolder;
+        }
+
+        h4 {
+            color: #2D8CF9;
+
+        }
+
     }
+
 
     ul {
         li {
@@ -145,9 +168,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 200px;
     padding: 1rem;
     gap: 3rem;
+    margin-bottom: 3rem;
 
 
     section {
@@ -195,6 +218,61 @@ img {
 
 
 
+#main-content {
+    background: rgb(74,69,244);
+    background: linear-gradient(121deg, rgba(74,69,244,1) 21%, rgba(5,3,48,1) 21%); 
+    // height: 200vh
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 5rem;
+    padding: 3rem;
+
+    article {
+        margin-inline: 10%;
+        // border: 2px solid re;
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+
+        .gym-information {
+            display: flex;
+            padding: 2rem;
+            gap: 2.5rem;
+            
+
+            img {
+                height: 300px;
+                border-radius: 1rem;
+            }
+
+            .key-description {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                h1 {
+                    @include sectionHeader();
+                }
+                
+                p {
+                    padding: 1rem;
+                    line-height: 1.5;
+                    font-size: 1.5rem;
+                    font-weight: ligther;
+                    color: white;
+                }
+            }
+            
+        }
+    }
+    
+    
+    .section-header {
+        @include sectionHeader()
+    }
+    
+}
 
 
 
