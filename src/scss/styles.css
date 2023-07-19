@@ -171,7 +171,6 @@ img {
   margin-inline: 10%;
   display: flex;
   flex-direction: column;
-  height: 500px;
 }
 #main-content article .gym-information {
   display: flex;
@@ -219,6 +218,10 @@ img {
   }
   #three-points section {
     width: 100%;
+  }
+  #main-content article .gym-information {
+    flex-direction: column;
+    gap: 4rem;
   }
 }
 @media (max-width: 768px) {
