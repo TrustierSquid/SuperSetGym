@@ -18,8 +18,8 @@ body {
 
 img {
   max-width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #navbar {
@@ -105,9 +105,18 @@ img {
   font-size: 1.2rem;
   cursor: pointer;
 }
+#hero-section #hero-btn button:hover {
+  height: 45px;
+  width: 155px;
+  transition: 250ms;
+}
 #hero-section #hero-btn #location-btn {
   background: transparent;
   border: 2px solid #4a45f4;
+}
+#hero-section #hero-btn #location-btn:hover {
+  background-color: #4a45f4;
+  transition: 250ms;
 }
 #hero-section #hero-img {
   position: absolute;
@@ -117,6 +126,33 @@ img {
   opacity: 0.3;
 }
 
+#location-finder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4a45f4;
+  height: 100px;
+  gap: 2rem;
+}
+#location-finder #location-input {
+  height: 30px;
+  width: 200px;
+}
+#location-finder button {
+  height: 40px;
+  width: 200px;
+  background-color: #2d8cf9;
+  color: white;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: 250ms;
+}
+#location-finder button:hover {
+  background-color: #333;
+}
+
 #three-points {
   display: flex;
   align-items: center;
@@ -124,6 +160,7 @@ img {
   padding: 1rem;
   gap: 3rem;
   margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 #three-points section {
   background: rgb(45, 140, 249);
@@ -159,39 +196,39 @@ img {
 }
 
 #main-content {
-  background: rgb(74, 69, 244);
-  background: linear-gradient(121deg, rgb(74, 69, 244) 21%, rgb(5, 3, 48) 21%);
+  background: rgb(5, 3, 48);
+  background: linear-gradient(121deg, rgb(5, 3, 48) 77%, rgb(74, 69, 244) 100%);
   display: flex;
   flex-direction: column;
   align-content: center;
-  gap: 5rem;
-  padding: 3rem;
+  gap: 13rem;
+  padding: 4rem 1rem 1rem 1rem;
+  margin-top: 5rem;
 }
 #main-content article {
-  margin-inline: 10%;
+  margin-inline: 5%;
   display: flex;
   flex-direction: column;
+  background: rgb(70, 74, 79);
+  background: linear-gradient(121deg, rgb(70, 74, 79) 0%, rgb(74, 69, 244) 66%);
+  padding: 2rem;
+  border-radius: 1rem;
 }
 #main-content article .gym-information {
   display: flex;
-  padding: 2rem;
+  padding: 1rem;
   gap: 2.5rem;
 }
 #main-content article .gym-information img {
-  height: 300px;
-  border-radius: 1rem;
+  max-width: 100%;
+  border-radius: 1.5rem;
 }
 #main-content article .gym-information .key-description {
   display: flex;
   flex-direction: column;
-  text-align: center;
 }
 #main-content article .gym-information .key-description h1 {
   font-size: 3rem;
-  background: #B2B4F4;
-  background: linear-gradient(to right, #B2B4F4 22%, #2D8CF9 75%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   text-align: center;
 }
 #main-content article .gym-information .key-description p {
@@ -199,29 +236,52 @@ img {
   line-height: 1.5;
   font-size: 1.5rem;
   font-weight: ligther;
+  color: #c3c3c3;
+  text-align: left;
+}
+#main-content article .gym-information .key-description .see-more-info {
+  height: 60px;
+  padding: 1rem;
+  font-size: 1.3rem;
+  background-color: #2d8cf9;
   color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 250ms;
+}
+#main-content article .gym-information .key-description .see-more-info:hover {
+  background-color: #333;
 }
 #main-content .section-header {
   font-size: 3rem;
-  background: #B2B4F4;
-  background: linear-gradient(to right, #B2B4F4 22%, #2D8CF9 75%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   text-align: center;
 }
 
-@media (max-width: 950px) {
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+@media (max-width: 1024px) {
   #three-points {
-    height: 150vh;
     flex-direction: column;
     justify-content: start;
   }
   #three-points section {
     width: 100%;
   }
+  #main-content {
+    margin-top: 5rem;
+  }
   #main-content article .gym-information {
     flex-direction: column;
     gap: 4rem;
+  }
+  #main-content article .gym-information .key-description p {
+    text-align: center;
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 768px) {
@@ -247,5 +307,43 @@ img {
   }
   #hero-section #hero-img {
     display: none;
+  }
+  #main-content {
+    margin-top: 5rem;
+  }
+  #main-content article .gym-information {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  #main-content article .gym-information .key-description p {
+    font-size: 1.1rem;
+  }
+  #location-finder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background: rgb(70, 74, 79);
+    background: linear-gradient(121deg, rgb(70, 74, 79) 0%, rgb(74, 69, 244) 66%);
+    gap: 2rem;
+  }
+  #location-finder #location-input {
+    height: 30px;
+    width: 200px;
+  }
+  #location-finder button {
+    height: 40px;
+    width: 100px;
+    background-color: #2d8cf9;
+    color: white;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: 250ms;
+  }
+  #location-finder button:hover {
+    background-color: #333;
   }
 }/*# sourceMappingURL=styles.css.map */
