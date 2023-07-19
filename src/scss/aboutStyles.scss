@@ -1,0 +1,17 @@
+@import url("/src/scss/styles.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#aboutHeader {
+    aspect-ratio: 1100/300;
+    width: 100%;
+    background-image: url("/src/assets/svg/aboutBG.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
