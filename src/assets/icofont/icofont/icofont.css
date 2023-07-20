@@ -33,14 +33,139 @@ url("./fonts/icofont.woff") format("woff");
   -webkit-font-smoothing: antialiased;
 }
 
-.icofont-gym:before
+.icofont-wave:before
 {
-  content: "\eb38";
+  content: "\ee89";
 }
 
-.icofont-clip-board:before
+.icofont-dumbbells:before
 {
-  content: "\ede5";
+  content: "\eb34";
+}
+
+.icofont-duotone.icofont-lock:before
+{
+  content: "\13b59";
+}
+
+.icofont-duotone.icofont-lock:after
+{
+  content: "\13b58";
+}
+
+.icofont-water-bottle:before
+{
+  content: "\eddb";
+}
+
+.icofont-medical-sign:before
+{
+  content: "\ec27";
+}
+
+.icofont-brand-nexus:before
+{
+  content: "\e919";
+}
+
+.icofont-instagram:before
+{
+  content: "\ed46";
+}
+
+.icofont-twitter:before
+{
+  content: "\ed7a";
+}
+
+.icofont-navigation-menu:before
+{
+  content: "\efa2";
+}
+
+.icofont-arrow-down:before
+{
+  content: "\ea5b";
+}
+
+.icofont-arrow-left:before
+{
+  content: "\ea5c";
+}
+
+.icofont-arrow-right:before
+{
+  content: "\ea5d";
+}
+
+.icofont-arrow-up:before
+{
+  content: "\ea5e";
+}
+
+.icofont-duotone.icofont-phone:before
+{
+  content: "\13b7f";
+}
+
+.icofont-duotone.icofont-phone:after
+{
+  content: "\13b7e";
+}
+
+.icofont-duotone.icofont-purge:before
+{
+  content: "\13b95";
+}
+
+.icofont-duotone.icofont-purge:after
+{
+  content: "\13b94";
+}
+
+.icofont-duotone.icofont-user:before
+{
+  content: "\13d06";
+}
+
+.icofont-duotone.icofont-user:after
+{
+  content: "\13d13";
+}
+
+.icofont-dumbbell:before
+{
+  content: "\eb33";
+}
+
+.icofont-fruits:before
+{
+  content: "\eb6b";
+}
+
+.icofont-heart-alt:before
+{
+  content: "\ef44";
+}
+
+.icofont-heart-beat-alt:before
+{
+  content: "\ec1e";
+}
+
+.icofont-duotone.icofont-video:before
+{
+  content: "\13bde";
+}
+
+.icofont-duotone.icofont-video:after
+{
+  content: "\13bdd";
+}
+
+.icofont-runner-alt-1:before
+{
+  content: "\edc5";
 }
 
 [class^="icofont-"].icofont-duotone,

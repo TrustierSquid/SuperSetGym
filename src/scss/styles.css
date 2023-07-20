@@ -200,20 +200,54 @@ img {
   display: flex;
   justify-content: center;
   align-content: center;
-  gap: 15rem;
+  gap: 10rem;
   padding: 4rem 1rem 1rem 1rem;
   margin-top: 5rem;
+  padding: 3rem;
 }
 #main-content h1 {
   font-size: 3rem;
+  white-space: nowrap;
+  background: #2D8CF9;
+  background: linear-gradient(to right, #2D8CF9 0%, #FFFFFF 66%);
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #main-content #offerings {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 10rem;
 }
 #main-content #offerings .offering {
+  text-align: center;
   padding: 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+#main-content #offerings .offering h2 {
+  background: #2D8CF9;
+  background: linear-gradient(to right, #2D8CF9 0%, #80AAFF 66%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+}
+#main-content #offerings .offering button {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  color: white;
+  background-color: #4a45f4;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 250ms;
+}
+#main-content #offerings .offering button:hover {
+  background-color: #333;
 }
 
 footer {
