@@ -197,65 +197,23 @@ img {
 
 #main-content {
   background: rgb(5, 3, 48);
-  background: linear-gradient(121deg, rgb(5, 3, 48) 77%, rgb(74, 69, 244) 100%);
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-content: center;
-  gap: 13rem;
+  gap: 15rem;
   padding: 4rem 1rem 1rem 1rem;
   margin-top: 5rem;
 }
-#main-content article {
-  margin-inline: 5%;
-  display: flex;
-  flex-direction: column;
-  background: rgb(70, 74, 79);
-  background: linear-gradient(121deg, rgb(70, 74, 79) 0%, rgb(74, 69, 244) 66%);
-  padding: 2rem;
-  border-radius: 1rem;
-}
-#main-content article .gym-information {
-  display: flex;
-  padding: 1rem;
-  gap: 2.5rem;
-}
-#main-content article .gym-information img {
-  max-width: 100%;
-  border-radius: 1.5rem;
-}
-#main-content article .gym-information .key-description {
-  display: flex;
-  flex-direction: column;
-}
-#main-content article .gym-information .key-description h1 {
+#main-content h1 {
   font-size: 3rem;
-  text-align: center;
 }
-#main-content article .gym-information .key-description p {
+#main-content #offerings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+#main-content #offerings .offering {
   padding: 1rem;
-  line-height: 1.5;
-  font-size: 1.5rem;
-  font-weight: ligther;
-  color: #c3c3c3;
-  text-align: left;
-}
-#main-content article .gym-information .key-description .see-more-info {
-  height: 60px;
-  padding: 1rem;
-  font-size: 1.3rem;
-  background-color: #2d8cf9;
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: 250ms;
-}
-#main-content article .gym-information .key-description .see-more-info:hover {
-  background-color: #333;
-}
-#main-content .section-header {
-  font-size: 3rem;
-  text-align: center;
 }
 
 footer {

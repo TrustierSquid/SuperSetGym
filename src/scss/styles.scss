@@ -265,80 +265,26 @@ img {
 
 #main-content {
     background: rgb(5,3,48);
-    background: linear-gradient(121deg, rgba(5,3,48,1) 77%, rgba(74,69,244,1) 100%); 
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-content: center;
-    gap: 13rem;
+    gap: 15rem;
     padding: 4rem 1rem 1rem 1rem;
     margin-top: 5rem;
 
-    article {
-        margin-inline: 5%;
-        // border: 2px solid re;
-        display: flex;
-        flex-direction: column;
-        background: rgb(70,74,79);
-        background: linear-gradient(121deg, rgba(70,74,79,1) 0%, rgba(74,69,244,1) 66%); 
-        padding: 2rem;
-        border-radius: 1rem;
+    h1  {
+        font-size: 3rem;
+    }
 
-        .gym-information {
-            display: flex;
+    #offerings {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+        .offering {
             padding: 1rem;
-            gap: 2.5rem;
-            
-
-            img {
-                max-width: 100%;
-                border-radius: 1.5rem;
-            }
-
-            .key-description {
-                display: flex;
-                flex-direction: column;
-
-                h1 {
-                    @include sectionHeader();
-                }
-                
-                p {
-                    padding: 1rem;
-                    line-height: 1.5;
-                    font-size: 1.5rem;
-                    font-weight: ligther;
-                    color: $gradientFontColor;
-                    text-align: left;
-                }
-
-
-
-                // btn that appears on each of the three points
-                .see-more-info {
-                    height: 60px;
-                    padding: 1rem;
-                    font-size: 1.3rem;
-                    background-color: $primary;
-                    color: white;
-                    border: none;
-                    border-radius: 0.5rem;
-                    cursor: pointer;
-                    transition: 250ms;
-                    
-                    &:hover {
-                        background-color: #333;
-                    }
-                }
-            }
-            
         }
     }
-    
-    
-    .section-header {
-        @include sectionHeader()
-    }
-    
 }
 
 footer {
@@ -346,7 +292,6 @@ footer {
     justify-content: center;
     padding: 1.5rem;
 }
-
 
 
 
