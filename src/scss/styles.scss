@@ -178,7 +178,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $accent;
+    background: $secondary;
     height: 100px;
     gap: 2rem;
 
@@ -264,9 +264,13 @@ img {
 
 
 #main-content {
-    background: rgb(5,3,48);
+    // aspect-ratio: 900/700;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/src/assets/svg/services.svg");
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-content: center;
     gap: 10rem;
     padding: 4rem 1rem 1rem 1rem;
@@ -282,14 +286,13 @@ img {
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-
     }
 
     #offerings {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10rem;
-
+        
         .offering {
             text-align: center;
             padding: 1rem;
@@ -297,6 +300,7 @@ img {
             display: flex;
             flex-direction: column;
             gap: 1.1rem;
+            min-width: 200px;
             
 
             h2 {
@@ -306,6 +310,10 @@ img {
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
                 font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.5rem;
             }
 
             button {
@@ -327,10 +335,53 @@ img {
     }
 }
 
+
+#schedule {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    gap: 10rem;
+    padding: 4rem 1rem 1rem 1rem;
+    margin-top: 5rem;
+    padding: 3rem;
+
+    h1 {
+        font-size: 3rem;
+        background: #2D8CF9;
+        background: linear-gradient(to right, #2D8CF9 0%, #FFFFFF 66%);
+        -webkit-background-clip: text;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    #schedule-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .schedule-item {
+            padding: 2rem;
+
+            h2 {
+                background: #2D8CF9;
+                background: linear-gradient(to right, #2D8CF9 0%, #80AAFF 66%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+}
+
+
+
+
 footer {
     display: flex;
     justify-content: center;
     padding: 1.5rem;
+    border-top: 2px solid $primary;
 }
 
 
@@ -349,22 +400,27 @@ footer {
 
     #main-content {
         margin-top: 5rem;
+        flex-direction: column;
+
+        h1 {
+            text-align: center;
+            white-space: pre-wrap;
+        }
         
-        article {
-            .gym-information {
-                flex-direction: column;
-                gap: 4rem;
-                
+        #offerings {
+            grid-template-columns: 1fr;
+        }
+    }
 
-                .key-description {
-                    
-                    p {
-                        text-align: center;
-                        font-size: 1.3rem;
-                    }
-                }
-            }
+    #schedule {
+        flex-direction: column;
 
+        #schedule-grid {
+            grid-template-columns: 1fr;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+            font-size: 1.5rem;
         }
     }
 }
@@ -409,23 +465,7 @@ footer {
     #main-content {
         margin-top: 5rem;
         
-        article {
-            .gym-information {
-                flex-direction: column;
-                gap: 4rem;
-                
-
-                .key-description {
-                    
-                    p {
-                        font-size: 1.1rem;
-                        
-                    }
-                    
-                }
-            }
-
-        }
+        
     }
 
     #location-finder {
@@ -434,8 +474,7 @@ footer {
         justify-content: center;
         align-items: center;
         height: 200px;
-        background: rgb(70,74,79);
-        background: linear-gradient(121deg, rgba(70,74,79,1) 0%, rgba(74,69,244,1) 66%);
+        background: $secondary;
         gap: 2rem;
     
         #location-input {

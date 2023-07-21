@@ -1,0 +1,6 @@
+@import url("/src/scss/styles.css");
+#main-container {
+  height: 80vh;
+  display: grid;
+  place-items: center;
+}/*# sourceMappingURL=join.css.map */
