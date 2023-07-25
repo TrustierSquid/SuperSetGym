@@ -145,8 +145,6 @@ img {
             @include heroButton();
 
             &:hover {
-                height: 45px;
-                width: 155px;
                 transition: 250ms;
             }
             
